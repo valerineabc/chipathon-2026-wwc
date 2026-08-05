@@ -27,10 +27,10 @@ N 470 -110 480 -110 {lab=#net5}
 N 480 -110 490 -110 {lab=#net5}
 N 420 -80 440 -80 {lab=DVSS}
 N 420 -160 440 -160 {lab=DVDD}
-C {Chipaton2026/src/schematic/DFF/DLATCH.sym} 240 -120 0 0 {name=x1}
-C {Chipaton2026/src/schematic/DFF/Inv1.sym} 140 -30 0 0 {name=x2}
-C {Chipaton2026/src/schematic/DFF/DLATCH.sym} 420 -120 0 0 {name=x3}
-C {Chipaton2026/src/schematic/DFF/Inv1.sym} 320 -30 0 0 {name=x4}
+C {src/schematic/DFF/DLATCH.sym} 240 -120 0 0 {name=x1}
+C {src/schematic/INV/Inv1.sym} 140 -30 0 0 {name=x2}
+C {src/schematic/DFF/DLATCH.sym} 420 -120 0 0 {name=x3}
+C {src/schematic/INV/Inv1.sym} 320 -30 0 0 {name=x4}
 C {noconn.sym} 310 -110 2 0 {name=l1}
 C {ipin.sym} 50 -130 0 0 {name=p1 lab=d}
 C {ipin.sym} 50 -30 0 0 {name=p2 lab=clk}

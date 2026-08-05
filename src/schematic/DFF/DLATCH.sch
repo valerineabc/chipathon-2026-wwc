@@ -48,11 +48,11 @@ N 590 -130 600 -130 {lab=q}
 N 590 -110 600 -110 {lab=vout}
 N 610 -40 620 -40 {lab=vout}
 N 610 -200 620 -200 {lab=q}
-C {Chipaton2026/src/schematic/DFF/NAND.sym} 300 -200 0 0 {name=x1}
-C {Chipaton2026/src/schematic/DFF/NAND.sym} 300 -40 0 0 {name=x2}
-C {Chipaton2026/src/schematic/DFF/NAND.sym} 540 -200 0 0 {name=x3}
-C {Chipaton2026/src/schematic/DFF/NAND.sym} 540 -40 0 0 {name=x4}
-C {Chipaton2026/src/schematic/DFF/Inv1.sym} 150 -30 0 0 {name=x5}
+C {src/schematic/NAND/NAND.sym} 300 -200 0 0 {name=x1}
+C {src/schematic/NAND/NAND.sym} 300 -40 0 0 {name=x2}
+C {src/schematic/NAND/NAND.sym} 540 -200 0 0 {name=x3}
+C {src/schematic/NAND/NAND.sym} 540 -40 0 0 {name=x4}
+C {src/schematic/INV/Inv1.sym} 150 -30 0 0 {name=x5}
 C {ipin.sym} 50 -210 0 0 {name=p1 lab=d}
 C {ipin.sym} 50 -190 0 0 {name=p2 lab=e}
 C {iopin.sym} 120 -80 3 0 {name=p3 lab=DVDD}
