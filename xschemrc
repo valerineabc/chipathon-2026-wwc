@@ -1,0 +1,7 @@
+# 1. Automatically load the correct PDK configuration (GF180 or Sky130)
+
+source $env(PDK_ROOT)/$env(PDK)/libs.tech/xschem/xschemrc
+
+# 2. Add the current repository folder so custom team symbols load correctly
+
+append XSCHEM_LIBRARY_PATH :[pwd]
