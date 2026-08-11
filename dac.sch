@@ -211,7 +211,7 @@ C {code_shown.sym} 530 -380 0 0 {name=s1 only_toplevel=false value="
 .tran 0.1n 200n
 .save all
 "}
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 60 -30 0 0 {name=Q1
+C {symbols/nfet_03v3.sym} 60 -30 0 0 {name=Q1
 model=nfet_03v3
 W=1u
 L=0.28u
@@ -226,7 +226,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 240 -30 0 0 {name=Q2
+C {symbols/nfet_03v3.sym} 240 -30 0 0 {name=Q2
 model=nfet_03v3
 W=2u
 L=0.28u
@@ -241,7 +241,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 410 -30 0 0 {name=Q3
+C {symbols/nfet_03v3.sym} 410 -30 0 0 {name=Q3
 model=nfet_03v3
 W=4u
 L=0.28u
@@ -256,7 +256,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 610 -30 0 0 {name=Q4
+C {symbols/nfet_03v3.sym} 610 -30 0 0 {name=Q4
 model=nfet_03v3
 W=8u
 L=0.28u
@@ -271,7 +271,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} -130 -30 2 0 {name=Q0
+C {symbols/nfet_03v3.sym} -130 -30 2 0 {name=Q0
 model=nfet_03v3
 W=1u
 L=0.28u
@@ -286,7 +286,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 60 -140 0 0 {name=TGN1
+C {symbols/nfet_03v3.sym} 60 -140 0 0 {name=TGN1
 model=nfet_03v3
 W=5u
 L=0.28u
@@ -301,7 +301,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 240 -140 0 0 {name=TGN2
+C {symbols/nfet_03v3.sym} 240 -140 0 0 {name=TGN2
 model=nfet_03v3
 W=5u
 L=0.28u
@@ -316,7 +316,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 410 -140 0 0 {name=TGN3
+C {symbols/nfet_03v3.sym} 410 -140 0 0 {name=TGN3
 model=nfet_03v3
 W=5u
 L=0.28u
@@ -331,7 +331,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 610 -140 0 0 {name=TGN4
+C {symbols/nfet_03v3.sym} 610 -140 0 0 {name=TGN4
 model=nfet_03v3
 W=5u
 L=0.28u
@@ -346,7 +346,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 150 -140 2 0 {name=TGP1
+C {symbols/pfet_03v3.sym} 150 -140 2 0 {name=TGP1
 model=pfet_03v3
 W=10u
 L=0.28u
@@ -361,7 +361,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 320 -140 2 0 {name=TGP2
+C {symbols/pfet_03v3.sym} 320 -140 2 0 {name=TGP2
 model=pfet_03v3
 W=10u
 L=0.28u
@@ -376,7 +376,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 500 -140 2 0 {name=TGP3
+C {symbols/pfet_03v3.sym} 500 -140 2 0 {name=TGP3
 model=pfet_03v3
 W=10u
 L=0.28u
@@ -391,7 +391,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 710 -140 2 0 {name=TGP4
+C {symbols/pfet_03v3.sym} 710 -140 2 0 {name=TGP4
 model=pfet_03v3
 W=10u
 L=0.28u
@@ -406,7 +406,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 820 270 0 0 {name=IN1
+C {symbols/nfet_03v3.sym} 820 270 0 0 {name=IN1
 model=nfet_03v3
 W=1u
 L=0.28u
@@ -421,7 +421,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 820 170 0 0 {name=IP1
+C {symbols/pfet_03v3.sym} 820 170 0 0 {name=IP1
 model=pfet_03v3
 W=2u
 L=0.28u
@@ -439,7 +439,7 @@ spiceprefix=X
 C {gnd.sym} 840 330 0 0 {name=l14 lab=0}
 C {vdd.sym} 840 110 0 0 {name=l15 lab=VDD}
 C {lab_pin.sym} 740 210 0 0 {name=p1 sig_type=std_logic lab=V1}
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1040 270 0 0 {name=IN2
+C {symbols/nfet_03v3.sym} 1040 270 0 0 {name=IN2
 model=nfet_03v3
 W=1u
 L=0.28u
@@ -454,7 +454,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 1040 170 0 0 {name=IP2
+C {symbols/pfet_03v3.sym} 1040 170 0 0 {name=IP2
 model=pfet_03v3
 W=2u
 L=0.28u
@@ -473,7 +473,7 @@ C {gnd.sym} 1060 330 0 0 {name=l16 lab=0}
 C {vdd.sym} 1060 110 0 0 {name=l17 lab=VDD}
 C {lab_pin.sym} 970 210 0 0 {name=p7 sig_type=std_logic lab=V2
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1260 270 0 0 {name=IN3
+C {symbols/nfet_03v3.sym} 1260 270 0 0 {name=IN3
 model=nfet_03v3
 W=1u
 L=0.28u
@@ -488,7 +488,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 1260 170 0 0 {name=IP3
+C {symbols/pfet_03v3.sym} 1260 170 0 0 {name=IP3
 model=pfet_03v3
 W=2u
 L=0.28u
@@ -506,7 +506,7 @@ spiceprefix=X
 C {gnd.sym} 1280 330 0 0 {name=l18 lab=0}
 C {vdd.sym} 1280 110 0 0 {name=l19 lab=VDD}
 C {lab_pin.sym} 1180 210 0 0 {name=p8 sig_type=std_logic lab=V3}
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1490 270 0 0 {name=IN4
+C {symbols/nfet_03v3.sym} 1490 270 0 0 {name=IN4
 model=nfet_03v3
 W=1u
 L=0.28u
@@ -521,7 +521,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {/home/ziaalby/chipathon-2026-gf180mcu-padring//gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 1490 170 0 0 {name=IP4
+C {symbols/pfet_03v3.sym} 1490 170 0 0 {name=IP4
 model=pfet_03v3
 W=2u
 L=0.28u

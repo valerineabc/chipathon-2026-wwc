@@ -245,7 +245,7 @@ N 220 0 230 0 {lab=WL}
 N 230 0 240 0 {lab=WL}
 N 680 -0 890 -0 {lab=WL}
 N 1330 -0 1540 0 {lab=WL}
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} -390 170 1 0 {name=SR1_M6
+C {symbols/nfet_03v3.sym} -390 170 1 0 {name=SR1_M6
 L=0.28u
 W=0.22u
 nf=1
@@ -259,7 +259,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} -240 110 2 0 {name=SR1_M3
+C {symbols/pfet_03v3.sym} -240 110 2 0 {name=SR1_M3
 L=0.28u
 W=0.22u
 nf=1
@@ -273,7 +273,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} -100 110 0 0 {name=SR1_M4
+C {symbols/pfet_03v3.sym} -100 110 0 0 {name=SR1_M4
 L=0.28u
 W=0.22u
 nf=1
@@ -287,7 +287,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 50 170 1 0 {name=SR1_M5
+C {symbols/nfet_03v3.sym} 50 170 1 0 {name=SR1_M5
 L=0.28u
 W=0.22u
 nf=1
@@ -301,7 +301,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} -240 320 2 0 {name=SR1_M1
+C {symbols/nfet_03v3.sym} -240 320 2 0 {name=SR1_M1
 L=0.28u
 W=0.22u
 nf=1
@@ -315,7 +315,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} -100 320 0 0 {name=SR1_M2
+C {symbols/nfet_03v3.sym} -100 320 0 0 {name=SR1_M2
 L=0.28u
 W=0.22u
 nf=1
@@ -361,7 +361,7 @@ tran 100p 100n
 print v(q) v(qb) v(bl) v(blb) v(wl)
 .endc
 "}
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 240 170 1 0 {name=SR2_M6
+C {symbols/nfet_03v3.sym} 240 170 1 0 {name=SR2_M6
 L=0.28u
 W=0.22u
 nf=1
@@ -375,7 +375,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 390 110 2 0 {name=SR2_M3
+C {symbols/pfet_03v3.sym} 390 110 2 0 {name=SR2_M3
 L=0.28u
 W=0.22u
 nf=1
@@ -389,7 +389,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 530 110 0 0 {name=SR2_M4
+C {symbols/pfet_03v3.sym} 530 110 0 0 {name=SR2_M4
 L=0.28u
 W=0.22u
 nf=1
@@ -403,7 +403,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 680 170 1 0 {name=SR2_M5
+C {symbols/nfet_03v3.sym} 680 170 1 0 {name=SR2_M5
 L=0.28u
 W=0.22u
 nf=1
@@ -417,7 +417,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 390 320 2 0 {name=SR2_M1
+C {symbols/nfet_03v3.sym} 390 320 2 0 {name=SR2_M1
 L=0.28u
 W=0.22u
 nf=1
@@ -431,7 +431,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 530 320 0 0 {name=SR2_M2
+C {symbols/nfet_03v3.sym} 530 320 0 0 {name=SR2_M2
 L=0.28u
 W=0.22u
 nf=1
@@ -454,7 +454,7 @@ C {lab_pin.sym} 730 190 2 0 {name=p7 sig_type=std_logic lab=BLB2
 }
 C {lab_pin.sym} 350 230 2 0 {name=p8 sig_type=std_logic lab=Q2}
 C {lab_pin.sym} 570 190 0 0 {name=p9 sig_type=std_logic lab=QB2}
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 890 170 1 0 {name=SR3_M6
+C {symbols/nfet_03v3.sym} 890 170 1 0 {name=SR3_M6
 L=0.28u
 W=0.22u
 nf=1
@@ -468,7 +468,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 1040 110 2 0 {name=SR3_M3
+C {symbols/pfet_03v3.sym} 1040 110 2 0 {name=SR3_M3
 L=0.28u
 W=0.22u
 nf=1
@@ -482,7 +482,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 1180 110 0 0 {name=SR3_M4
+C {symbols/pfet_03v3.sym} 1180 110 0 0 {name=SR3_M4
 L=0.28u
 W=0.22u
 nf=1
@@ -496,7 +496,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1330 170 1 0 {name=SR3_M5
+C {symbols/nfet_03v3.sym} 1330 170 1 0 {name=SR3_M5
 L=0.28u
 W=0.22u
 nf=1
@@ -510,7 +510,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1040 320 2 0 {name=SR3_M1
+C {symbols/nfet_03v3.sym} 1040 320 2 0 {name=SR3_M1
 L=0.28u
 W=0.22u
 nf=1
@@ -524,7 +524,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1180 320 0 0 {name=SR3_M2
+C {symbols/nfet_03v3.sym} 1180 320 0 0 {name=SR3_M2
 L=0.28u
 W=0.22u
 nf=1
@@ -547,7 +547,7 @@ C {lab_pin.sym} 1380 190 2 0 {name=p12 sig_type=std_logic lab=BLB3
 }
 C {lab_pin.sym} 1000 230 2 0 {name=p13 sig_type=std_logic lab=Q3}
 C {lab_pin.sym} 1220 190 0 0 {name=p14 sig_type=std_logic lab=QB3}
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1540 170 1 0 {name=SR4_M6
+C {symbols/nfet_03v3.sym} 1540 170 1 0 {name=SR4_M6
 L=0.28u
 W=0.22u
 nf=1
@@ -561,7 +561,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 1690 110 2 0 {name=SR4_M3
+C {symbols/pfet_03v3.sym} 1690 110 2 0 {name=SR4_M3
 L=0.28u
 W=0.22u
 nf=1
@@ -575,7 +575,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/pfet_03v3.sym} 1830 110 0 0 {name=SR4_M4
+C {symbols/pfet_03v3.sym} 1830 110 0 0 {name=SR4_M4
 L=0.28u
 W=0.22u
 nf=1
@@ -589,7 +589,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1980 170 1 0 {name=SR4_M5
+C {symbols/nfet_03v3.sym} 1980 170 1 0 {name=SR4_M5
 L=0.28u
 W=0.22u
 nf=1
@@ -603,7 +603,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1690 320 2 0 {name=SR4_M1
+C {symbols/nfet_03v3.sym} 1690 320 2 0 {name=SR4_M1
 L=0.28u
 W=0.22u
 nf=1
@@ -617,7 +617,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {gf180mcu/gf180mcuD/libs.tech/xschem/symbols/nfet_03v3.sym} 1830 320 0 0 {name=SR4_M2
+C {symbols/nfet_03v3.sym} 1830 320 0 0 {name=SR4_M2
 L=0.28u
 W=0.22u
 nf=1
