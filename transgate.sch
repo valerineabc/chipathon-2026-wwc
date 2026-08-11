@@ -8,11 +8,11 @@ E {}
 N -70 -140 60 -140 {lab=d}
 N -70 -140 -70 30 {lab=d}
 N -70 30 60 30 {lab=d}
-N 120 30 240 30 {lab=y}
-N 240 -140 240 30 {lab=y}
-N 120 -140 240 -140 {lab=y}
+N 120 30 240 30 {lab=s}
+N 240 -140 240 30 {lab=s}
+N 120 -140 240 -140 {lab=s}
 N 90 70 90 90 {lab=c}
-N 90 -200 90 -180 {lab=cb}
+N 90 -200 90 -180 {lab=#net1}
 N 90 -140 90 -90 {lab=vdd}
 N 20 -90 90 -90 {lab=vdd}
 N 120 -10 150 -10 {lab=gnd}
@@ -20,10 +20,20 @@ N 90 -10 90 30 {lab=gnd}
 N 90 -10 120 -10 {lab=gnd}
 N -10 -90 10 -90 {lab=vdd}
 N 10 -90 20 -90 {lab=vdd}
-N 90 -220 90 -200 {lab=cb}
+N 90 -220 90 -200 {lab=#net1}
 N 90 90 90 110 {lab=c}
-N 240 -50 260 -50 {lab=y}
+N 240 -50 260 -50 {lab=s}
 N -90 -50 -70 -50 {lab=d}
+N 90 -220 380 -220 {lab=#net1}
+N 380 -220 380 -130 {lab=#net1}
+N 380 -0 380 110 {lab=c}
+N 90 110 380 110 {lab=c}
+N 320 -90 320 -20 {lab=vdd}
+N 90 -90 320 -90 {lab=vdd}
+N 430 -20 430 60 {lab=gnd}
+N 170 60 430 60 {lab=gnd}
+N 130 60 170 60 {lab=gnd}
+N 130 -10 130 60 {lab=gnd}
 C {symbols/nfet_03v3.sym} 90 50 3 0 {name=M1
 L=0.28u
 W=0.22u
@@ -57,11 +67,9 @@ C {iopin.sym} 150 -10 0 0 {name=p6 lab=gnd
 C {iopin.sym} -10 -90 2 0 {name=p5 lab=vdd
 
 }
-C {iopin.sym} 90 -220 3 0 {name=p1 lab=cb
-
-}
 C {iopin.sym} 90 110 1 0 {name=p2 lab=c
 
 }
 C {ipin.sym} -90 -50 0 0 {name=p3 lab=d}
 C {opin.sym} 260 -50 0 0 {name=p4 lab=s}
+C {inverter.sym} 380 -60 3 0 {name=x1}
