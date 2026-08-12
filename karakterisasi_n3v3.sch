@@ -32,8 +32,13 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {vsource.sym} -50 30 0 0 {name=V1 value=0 savecurrent=true}
-C {vsource.sym} 160 30 0 0 {name=V2 value=0.1 savecurrent=true}
+C {vsource.sym} 160 30 0 0 {name=V2 value=3.3 savecurrent=true}
 C {gnd.sym} 160 80 0 0 {name=l1 lab=0}
-C {simulator_commands_shown.sym} -50 -60 0 1 {.dc V1 0 3.3 1m}
 C {lab_pin.sym} 40 -70 0 0 {name=p1 sig_type=std_logic lab=v2}
 C {lab_pin.sym} -20 0 0 0 {name=p2 sig_type=std_logic lab=V1}
+C {simulator_commands_shown.sym} -190 -60 0 0 {name=COMMANDS
+simulator=ngspice
+only_toplevel=false 
+value="
+.dc V1 0 1.2 0.01
+"}
