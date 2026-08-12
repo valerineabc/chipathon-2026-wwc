@@ -205,8 +205,8 @@ C {lab_pin.sym} -1860 500 0 0 {name=p5 sig_type=std_logic lab=V1}
 C {lab_pin.sym} -1270 440 2 0 {name=p6 sig_type=std_logic lab=Vout
 }
 C {code_shown.sym} -1370 260 0 0 {name=s1 only_toplevel=false value="
-.lib /home/ziaalby/chipathon-2026-gf180mcu-padring/gf180mcu/gf180mcuD/libs.tech/ngspice/design.ngspice
-.lib /home/ziaalby/chipathon-2026-gf180mcu-padring/gf180mcu/gf180mcuD/libs.tech/ngspice/sm141064.ngspice nfet_03v3_t
+.lib /chipathon-2026-gf180mcu-padring/gf180mcu/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /chipathon-2026-gf180mcu-padring/gf180mcu/gf180mcuD/libs.tech/ngspice/sm141064.ngspice nfet_03v3_t
 
 .tran 0.1n 200n
 .save all
