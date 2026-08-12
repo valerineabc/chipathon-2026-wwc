@@ -299,10 +299,10 @@ N -1670 -360 -1440 -360 {lab=MODE}
 N -1700 -360 -1670 -360 {lab=MODE}
 N -1700 -1100 -1700 -360 {lab=MODE}
 N 140 -60 210 -60 {lab=Vcompute}
-N 140 -30 230 -30 {lab=#net30}
-N 140 -10 250 -10 {lab=#net31}
-N 140 10 270 10 {lab=#net32}
-N 140 30 290 30 {lab=#net33}
+N 140 -30 230 -30 {lab=Q4}
+N 140 -10 250 -10 {lab=Q3}
+N 140 10 270 10 {lab=Q2}
+N 140 30 290 30 {lab=Q1}
 C {memori.sym} -10 130 0 0 {name=x1}
 C {transgate.sym} -140 -240 1 0 {name=x2}
 C {transgate.sym} 30 -240 1 0 {name=x3}
@@ -319,17 +319,13 @@ C {transgate.sym} -1320 -250 0 0 {name=x13}
 C {transgate.sym} -1320 300 0 0 {name=x14}
 C {transgate.sym} -1280 -680 0 0 {name=x15}
 C {transgate.sym} -1280 -850 0 0 {name=x16}
-C {transgate.sym} -1280 -1030 0 0 {name=x17}
+C {src/schematic/TG/transgate.sym} -1280 -1030 0 0 {name=x17}
 C {transgate.sym} -1280 -480 0 0 {name=x18}
 C {transgate.sym} -910 -700 0 0 {name=x19}
 C {transgate.sym} -910 -870 0 0 {name=x20}
 C {transgate.sym} -910 -1050 0 0 {name=x21}
 C {transgate.sym} -910 -500 0 0 {name=x22}
-C {inverter.sym} -730 -1100 0 0 {name=x23}
-C {inverter.sym} -730 -920 0 0 {name=x24}
-C {inverter.sym} -730 -750 0 0 {name=x25}
-C {inverter.sym} -730 -550 0 0 {name=x26}
-C {inverter.sym} -1610 -1100 0 0 {name=x27}
+C {src/schematic/INV/inverter.sym} -1610 -1100 0 0 {name=x27}
 C {ipin.sym} -310 -470 0 0 {name=p1 lab=Vpre1}
 C {ipin.sym} -110 -470 0 0 {name=p2 lab=Vpre2}
 C {ipin.sym} 60 -470 0 0 {name=p3 lab=Vpre3}
@@ -346,3 +342,7 @@ C {opin.sym} 230 -30 0 0 {name=p13 lab=Q4}
 C {opin.sym} 250 -10 0 0 {name=p14 lab=Q3}
 C {opin.sym} 270 10 0 0 {name=p15 lab=Q2}
 C {opin.sym} 290 30 0 0 {name=p16 lab=Q1}
+C {src/schematic/INV/inverter.sym} -730 -1100 0 0 {name=x23}
+C {src/schematic/INV/inverter.sym} -730 -920 0 0 {name=x24}
+C {src/schematic/INV/inverter.sym} -730 -750 0 0 {name=x25}
+C {src/schematic/INV/inverter.sym} -730 -550 0 0 {name=x26}

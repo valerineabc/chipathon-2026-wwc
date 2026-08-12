@@ -38,6 +38,6 @@ C {iopin.sym} 990 -280 0 0 {name=p4 lab=D}
 C {iopin.sym} 600 -290 0 0 {name=p5 lab=C}
 C {iopin.sym} 220 -290 0 0 {name=p6 lab=B}
 C {iopin.sym} 220 -410 0 0 {name=p7 lab=A}
-C {norGate.sym} 370 -270 0 0 {name=x1}
-C {norGate.sym} 760 -260 0 0 {name=x3}
-C {norGate.sym} 1150 -250 0 0 {name=x5}
+C {src\schematic\NOR\norGate.sym} 370 -270 0 0 {name=x1}
+C {src\schematic\NOR\norGate.sym} 760 -260 0 0 {name=x3}
+C {src\schematic\NOR\norGate.sym} 1150 -250 0 0 {name=x5}

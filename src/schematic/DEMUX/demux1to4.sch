@@ -7,20 +7,20 @@ F {}
 E {}
 N -130 -220 -110 -220 {lab=s0}
 N -130 540 -110 540 {lab=s1}
-C {inverter.sym} -50 -220 0 0 {name=x0}
-C {inverter.sym} -50 540 0 0 {name=x2}
+C {src\schematic\INV\inverter.sym} -50 -220 0 0 {name=x0}
+C {src\schematic\INV\inverter.sym} -50 540 0 0 {name=x2}
 C {nand.sym} 200 -220 0 0 {name=x3}
 C {nand.sym} 200 30 0 0 {name=x4}
 C {nand.sym} 200 280 0 0 {name=x5}
 C {nand.sym} 200 540 0 0 {name=x6}
-C {inverter.sym} 440 -230 0 0 {name=x7}
-C {inverter.sym} 440 20 0 0 {name=x8}
-C {inverter.sym} 440 270 0 0 {name=x9}
-C {inverter.sym} 440 530 0 0 {name=x10}
-C {transgate.sym} 730 -200 0 0 {name=x11}
-C {transgate.sym} 730 50 0 0 {name=x12}
-C {transgate.sym} 730 300 0 0 {name=x13}
-C {transgate.sym} 730 560 0 0 {name=x14}
+C {src\schematic\INV\inverter.sym} 440 -230 0 0 {name=x7}
+C {src\schematic\INV\inverter.sym} 440 20 0 0 {name=x8}
+C {src\schematic\INV\inverter.sym} 440 270 0 0 {name=x9}
+C {src\schematic\INV\inverter.sym} 440 530 0 0 {name=x10}
+C {src\schematic\TG\transgate.sym} 730 -200 0 0 {name=x11}
+C {src\schematic\TG\transgate.sym} 730 50 0 0 {name=x12}
+C {src\schematic\TG\transgate.sym} 730 300 0 0 {name=x13}
+C {src\schematic\TG\transgate.sym} 730 560 0 0 {name=x14}
 C {ipin.sym} -130 -220 0 0 {name=p3 lab=s0}
 C {ipin.sym} -130 540 0 0 {name=p1 lab=s1}
 C {ipin.sym} 640 -230 0 0 {name=p17 lab=D}

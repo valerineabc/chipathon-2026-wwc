@@ -87,7 +87,7 @@ C {lab_pin.sym} 1120 -310 0 0 {name=p5 sig_type=std_logic lab=d
 }
 C {lab_pin.sym} 1120 -290 0 0 {name=p6 sig_type=std_logic lab=e
 }
-C {Chipaton2026/src/schematic/DFF/DLATCH.sym} 1190 -300 0 0 {name=x1}
+C {src/schematic/DLATCH/DLATCH.sym} 1190 -300 0 0 {name=x1}
 C {capa.sym} 1260 -260 0 0 {name=C2
 m=1
 value='PAR_CLOAD'

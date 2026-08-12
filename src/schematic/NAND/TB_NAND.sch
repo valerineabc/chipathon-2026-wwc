@@ -75,7 +75,7 @@ write TB_inv1.raw
 plot v(a) v(b) v(vout)
 .endc
 "}
-C {Chipaton2026/src/schematic/DFF/NAND.sym} 1210 -300 0 0 {name=x1}
+C {src/schematic/NAND/NAND.sym} 1210 -300 0 0 {name=x1}
 C {vsource.sym} 1060 -100 0 0 {name=V2 value="0 PULSE('PAR_VDD' 0 PAR_DEL PAR_SLEW PAR_SLEW '1.0*PAR_PER' '2.0*PAR_PER')" savecurrent=false}
 C {lab_pin.sym} 1060 -150 0 0 {name=p4 sig_type=std_logic lab=b
 }

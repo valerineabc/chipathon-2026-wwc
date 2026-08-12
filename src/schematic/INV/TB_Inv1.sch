@@ -62,4 +62,4 @@ write TB_inv1.raw
 plot v(vin) v(vout)
 .endc
 "}
-C {Chipaton2026/src/schematic/DFF/Inv1.sym} 1170 -600 0 0 {name=x1}
+C {src/schematic/INV/Inv1.sym} 1170 -600 0 0 {name=x1}

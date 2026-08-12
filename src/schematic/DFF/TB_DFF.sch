@@ -93,4 +93,4 @@ value='PAR_CLOAD'
 footprint=1206
 device="ceramic capacitor"}
 C {lab_pin.sym} 1260 -290 2 0 {name=p7 sig_type=std_logic lab=qn}
-C {Chipaton2026/src/schematic/DFF/DFF.sym} 1190 -300 0 0 {name=x1}
+C {src/schematic/DFF/DFF.sym} 1190 -300 0 0 {name=x1}

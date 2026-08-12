@@ -72,4 +72,4 @@ C {iopin.sym} 90 110 1 0 {name=p2 lab=c
 }
 C {ipin.sym} -90 -50 0 0 {name=p3 lab=d}
 C {opin.sym} 260 -50 0 0 {name=p4 lab=s}
-C {inverter.sym} 380 -60 3 0 {name=x1}
+C {src/schematic/INV/inverter.sym} 380 -60 3 0 {name=x1}
