@@ -113,7 +113,7 @@ truth - this fork _is_ those six files.
 
 ## Repository layout
 
-```text
+```sh
 .
 |-- README.md                       # this file
 |-- NOTICE                          # Apache-2.0 attribution
