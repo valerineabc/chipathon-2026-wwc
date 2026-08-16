@@ -28,15 +28,19 @@ N 90 -220 380 -220 {lab=#net1}
 N 380 -220 380 -130 {lab=#net1}
 N 380 -0 380 110 {lab=c}
 N 90 110 380 110 {lab=c}
-N 320 -90 320 -20 {lab=vdd}
+N 320 -90 320 -30 {lab=vdd}
 N 90 -90 320 -90 {lab=vdd}
 N 430 -20 430 60 {lab=gnd}
 N 170 60 430 60 {lab=gnd}
 N 130 60 170 60 {lab=gnd}
 N 130 -10 130 60 {lab=gnd}
+N 430 -30 430 -20 {lab=gnd}
+N 410 -30 430 -30 {lab=gnd}
+N 320 -30 350 -30 {lab=vdd}
+N 380 -130 380 -90 {lab=#net1}
 C {symbols/nfet_03v3.sym} 90 50 3 0 {name=M1
-L=0.28u
-W=0.22u
+L=0.3u
+W=0.85u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -49,8 +53,8 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 90 -160 1 0 {name=M2
-L=0.28u
-W=0.22u
+L=0.3u
+W=1.7u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -72,4 +76,4 @@ C {iopin.sym} 90 110 1 0 {name=p2 lab=c
 }
 C {ipin.sym} -90 -50 0 0 {name=p3 lab=d}
 C {opin.sym} 260 -50 0 0 {name=p4 lab=s}
-C {src/schematic/INV/inverter.sym} 380 -60 3 0 {name=x1}
+C {src/schematic/INV/Inv1.sym} 380 -60 3 0 {name=x1}
