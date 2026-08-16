@@ -16,10 +16,10 @@ LibreLane flow are the work of Leo Moser and the wafer-space
 contributors; the workshop pad layout is a port of Juan Moya's
 `padring_gf180`. Both are Apache-2.0.
 
-- Upstream template — https://github.com/wafer-space/gf180mcu-project-template
+- Upstream template — <https://github.com/wafer-space/gf180mcu-project-template>
   pinned at commit `8bd0f6ff28947bf222c5288343f8f3ee1fc04632`
   (`chore: update flake to librelane 3.0`, 2026-03-26).
-- Workshop pad layout — https://github.com/JuanMoya/padring_gf180
+- Workshop pad layout — <https://github.com/JuanMoya/padring_gf180>
   (`Workshop_CASS/padring/workshop_padring.cfg`).
 
 See `CREDITS.md` for the per-artifact attribution and `NOTICE` for
@@ -29,14 +29,14 @@ the formal Apache-2.0 notice.
 
 Exactly 6 files (one commit on top of pinned upstream):
 
-| File | Change |
-|------|--------|
-| `src/slot_defines.svh` | add `SLOT_WORKSHOP` block (NUM_INPUT=1, BIDIR=20, ANALOG=60, 4/4 DVDD/DVSS) |
-| `src/chip_core.sv` | replace example counter with a 20-bit counter driving the 20 bidir pads; analog pads float through |
-| `librelane/slots/slot_workshop.yaml` | **new** slot (DIE 2935x2935 um, CORE 2051x2051 um, VERILOG_DEFINES=SLOT_WORKSHOP) |
-| `librelane/config.yaml` | drop SRAM `MACROS` entry and PDN macro connections - not used in this slot |
-| `librelane/pdn_cfg.tcl` | drop SRAM-specific `define_pdn_grid` blocks |
-| `Makefile` | `AVAILABLE_SLOTS += workshop` |
+| File                                 | Change                                                                                             |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| `src/slot_defines.svh`               | add `SLOT_WORKSHOP` block (NUM_INPUT=1, BIDIR=20, ANALOG=60, 4/4 DVDD/DVSS)                        |
+| `src/chip_core.sv`                   | replace example counter with a 20-bit counter driving the 20 bidir pads; analog pads float through |
+| `librelane/slots/slot_workshop.yaml` | **new** slot (DIE 2935x2935 um, CORE 2051x2051 um, VERILOG_DEFINES=SLOT_WORKSHOP)                  |
+| `librelane/config.yaml`              | drop SRAM `MACROS` entry and PDN macro connections - not used in this slot                         |
+| `librelane/pdn_cfg.tcl`              | drop SRAM-specific `define_pdn_grid` blocks                                                        |
+| `Makefile`                           | `AVAILABLE_SLOTS += workshop`                                                                      |
 
 `git log upstream/main..main` shows the single derivation commit;
 `git diff upstream/main..main` shows the delta.
@@ -73,6 +73,7 @@ Runtime on a modern laptop: **~2h 15m** for the full signoff run
 (Magic DRC + KLayout DRC + LVS + antenna + STA across 3 corners).
 
 Final artifacts land in `final/`:
+
 - `final/gds/chip_top.gds` (~85 MB)
 - `final/metrics.csv` (signoff metrics)
 - `final/*.log` (per-stage logs)
@@ -108,11 +109,11 @@ LibreLane 3.0 + wafer-space PDK 1.8.0) is the source of truth for
 a fresh build on a compatible host will reproduce the same result.
 
 If you do not have the reference tree, the repo itself is the ground
-truth - this fork *is* those six files.
+truth - this fork _is_ those six files.
 
 ## Repository layout
 
-```
+```text
 .
 |-- README.md                       # this file
 |-- NOTICE                          # Apache-2.0 attribution
