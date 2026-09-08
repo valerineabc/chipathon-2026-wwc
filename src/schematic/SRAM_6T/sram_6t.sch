@@ -62,12 +62,12 @@ N -390 360 -280 360 {lab=0}
 N -260 290 -210 290 {lab=0}
 N -210 290 -210 360 {lab=0}
 N -260 360 -210 360 {lab=0}
-N -750 110 -750 140 {lab=BLB}
-N -750 200 -750 220 {lab=0}
-N -830 110 -830 140 {lab=BL}
-N -830 200 -830 220 {lab=0}
-N -910 110 -910 140 {lab=WL}
-N -910 200 -910 220 {lab=0}
+N -660 320 -660 350 {lab=BLB}
+N -660 410 -660 430 {lab=0}
+N -900 110 -900 140 {lab=BL}
+N -900 200 -900 220 {lab=0}
+N -900 300 -900 330 {lab=WL}
+N -900 390 -900 410 {lab=0}
 N 440 110 440 320 {lab=QB2}
 N 410 320 440 320 {lab=QB2}
 N 480 110 500 110 {lab=Q2}
@@ -342,23 +342,24 @@ C {lab_pin.sym} 100 190 2 0 {name=p2 sig_type=std_logic lab=BLB1
 C {lab_pin.sym} -280 230 2 0 {name=p3 sig_type=std_logic lab=Q1}
 C {lab_pin.sym} -60 190 0 0 {name=p4 sig_type=std_logic lab=QB1}
 C {lab_pin.sym} -390 0 0 0 {name=p5 sig_type=std_logic lab=WL}
-C {vdd.sym} -750 110 0 0 {name=l5 lab=BLB}
-C {vsource.sym} -750 170 0 0 {name=VBLB value="PULSE(3 0 10n 100p 100p 20n 50n)" savecurrent=false}
-C {gnd.sym} -750 220 0 0 {name=l8 lab=0}
-C {vdd.sym} -830 110 0 0 {name=l9 lab=BL}
-C {vsource.sym} -830 170 0 0 {name=VBL value="PULSE(0 3 10n 100p 100p 20n 50n)" savecurrent=false}
-C {gnd.sym} -830 220 0 0 {name=l10 lab=0}
-C {vdd.sym} -910 110 0 0 {name=l11 lab=WL}
-C {vsource.sym} -910 170 0 0 {name=VWL value="PULSE(0 3 10n 100p 100p 20n 50n)" savecurrent=false
+C {vdd.sym} -660 320 0 0 {name=l5 lab=BLB}
+C {vsource.sym} -660 380 0 0 {name=VBLB value="PULSE(3 0 10n 100p 100p 20n 50n)" savecurrent=false}
+C {gnd.sym} -660 430 0 0 {name=l8 lab=0}
+C {vdd.sym} -900 110 0 0 {name=l9 lab=BL}
+C {vsource.sym} -900 170 0 0 {name=VBL value="PULSE(0 3 10n 100p 100p 20n 50n)" savecurrent=false}
+C {gnd.sym} -900 220 0 0 {name=l10 lab=0}
+C {vdd.sym} -900 300 0 0 {name=l11 lab=WL}
+C {vsource.sym} -900 360 0 0 {name=VWL value="PULSE(0 3 10n 100p 100p 20n 50n)" savecurrent=false
 }
-C {gnd.sym} -910 220 0 0 {name=l12 lab=0}
-C {code_shown.sym} -1400 470 0 0 {name=s1 only_toplevel=false value="
-.include /home/ziaalby/chipathon-2026-gf180mcu-padring/gf180mcu/gf180mcuD/libs.tech/ngspice/design.ngspice
-.lib /home/ziaalby/chipathon-2026-gf180mcu-padring/gf180mcu/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+C {gnd.sym} -900 410 0 0 {name=l12 lab=0}
+C {code_shown.sym} -360 -240 0 0 {name=s1 only_toplevel=false value="
 .control
 save all
 tran 100p 100n
-print v(q) v(qb) v(bl) v(blb) v(wl)
+* print v(q1) v(qb1) v(bl) v(blb) v(wl)
+plot v(BL) v(BLB)
+plot v(WL) 
+plot v(Q1) v(Q2) v(Q3) v(Q4)
 .endc
 "}
 C {symbols/nfet_03v3.sym} 240 170 1 0 {name=SR2_M6
@@ -640,3 +641,10 @@ C {lab_pin.sym} 2030 190 2 0 {name=p17 sig_type=std_logic lab=BLB4
 }
 C {lab_pin.sym} 1650 230 2 0 {name=p18 sig_type=std_logic lab=Q4}
 C {lab_pin.sym} 1870 190 0 0 {name=p19 sig_type=std_logic lab=QB4}
+C {devices/code_shown.sym} -880 -220 0 0 {name=MODELS1 only_toplevel=true
+format="tcleval( @value )"
+value="
+.include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/smbb000149.ngspice typical
+"}

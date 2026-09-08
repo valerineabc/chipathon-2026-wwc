@@ -5,3 +5,5 @@ source $env(PDK_ROOT)/$env(PDK)/libs.tech/xschem/xschemrc
 # 2. Add the current repository folder so custom team symbols load correctly
 
 append XSCHEM_LIBRARY_PATH :[pwd]
+
+set netlist_dir ./src/schematic/netlist

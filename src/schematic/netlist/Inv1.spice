@@ -1,0 +1,12 @@
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/Inv1.sch
+**.subckt Inv1 DVDD vin vout DVSS
+*.ipin vin
+*.opin vout
+*.iopin DVDD
+*.iopin DVSS
+XM3 vout vin DVDD DVDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM4 vout vin DVSS DVSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+**.ends
+.end
