@@ -50,7 +50,7 @@ N 210 -30 330 -30 {lab=Q3}
 N 210 -10 350 -10 {lab=Q2}
 N 210 10 370 10 {lab=Q1}
 N 270 -70 280 -70 {lab=v_compute}
-C {integrasi.sym} 60 -30 0 0 {name=x1}
+C {src/schematic/INTEGRASI/integrasi.sym} 60 -30 0 0 {name=x1}
 C {gnd.sym} 60 100 0 0 {name=l1 lab=0}
 C {vsource.sym} -140 90 0 0 {name=V1 value=3 savecurrent=false}
 C {vsource.sym} -200 90 0 0 {name=V2 value=3 savecurrent=false}

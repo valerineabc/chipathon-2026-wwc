@@ -1,0 +1,7 @@
+* NGSPICE file created from Inv1.ext - technology: gf180mcuD
+
+.subckt Inv1 vin DVDD DVSS
+X0 a_220_200# vin a_0_200# VSUBS nfet_03v3 ad=0.68p pd=3.3u as=0.68p ps=3.3u w=0.85u l=0.3u
+X1 a_220_800# vin a_0_800# w_n100_640# pfet_03v3 ad=1.36p pd=5u as=1.36p ps=5u w=1.7u l=0.3u
+.ends
+

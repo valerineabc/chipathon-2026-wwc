@@ -1,0 +1,69 @@
+magic
+tech gf180mcuD
+magscale 1 2
+timestamp 1790062074
+<< checkpaint >>
+rect -420 540 496 676
+rect -420 480 512 540
+rect -432 434 512 480
+rect -432 -472 580 434
+rect -332 -484 580 -472
+<< nwell >>
+rect -20 140 96 260
+rect -20 20 112 140
+<< pmos >>
+rect 32 160 44 228
+rect 14 40 26 74
+rect 32 40 44 74
+<< pdiff >>
+rect 0 160 32 228
+rect 44 160 76 228
+rect 0 40 14 74
+rect 26 40 32 74
+rect 44 40 76 74
+<< polysilicon >>
+rect 32 228 44 248
+rect 14 74 26 128
+rect 32 124 44 160
+rect 32 74 44 108
+rect 14 -60 26 40
+rect 32 20 44 40
+<< polycontact >>
+rect 30 108 46 124
+<< metal1 >>
+rect -20 252 96 276
+rect 4 164 20 252
+rect 56 136 72 224
+rect 56 128 84 136
+rect 20 124 84 128
+rect 20 108 30 124
+rect 46 112 84 124
+rect 46 108 72 112
+rect 20 104 72 108
+rect 4 64 20 70
+rect 4 44 48 64
+rect 56 44 72 104
+rect 4 16 20 44
+rect 32 16 40 44
+rect -20 -8 96 16
+rect 32 -16 40 -8
+rect 20 -36 48 -16
+rect 64 -56 84 -28
+use pfet_03v3_J582B5  XM3
+timestamp 0
+transform 1 0 24 0 1 4
+box -56 -76 56 76
+use nfet_03v3_SJFTX6  XM4
+timestamp 0
+transform 1 0 124 0 1 -25
+box -56 -59 56 59
+<< labels >>
+rlabel metal1 30 108 46 124 0 vin
+port 1 nsew
+rlabel metal1 56 112 72 128 0 vout
+port 2 nsew
+rlabel metal1 0 252 40 276 0 DVDD
+port 3 nsew
+rlabel metal1 0 -8 40 16 0 DVSS
+port 4 nsew
+<< end >>
