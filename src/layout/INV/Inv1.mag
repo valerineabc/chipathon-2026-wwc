@@ -1,13 +1,66 @@
 magic
 tech gf180mcuD
 magscale 1 2
-timestamp 1790062074
-<< checkpaint >>
-rect -420 540 496 676
-rect -420 480 512 540
-rect -432 434 512 480
-rect -432 -472 580 434
-rect -332 -484 580 -472
+timestamp 1790065159
+<< error_s >>
+rect 32 124 35 137
+rect 30 108 35 124
+rect 41 121 46 124
+rect 43 110 46 121
+rect 41 108 46 110
+rect 32 75 35 108
+rect 10 74 48 75
+rect 0 60 75 74
+rect 32 60 35 60
+rect 12 56 35 60
+rect 12 53 35 56
+rect 19 49 35 53
+rect 56 49 57 60
+rect 0 41 14 49
+rect 18 44 35 49
+rect 44 46 58 49
+rect 18 41 32 44
+rect 40 44 58 46
+rect 40 41 41 44
+rect 44 41 58 44
+rect 0 40 58 41
+rect 60 40 75 60
+rect 60 40 76 40
+rect 14 38 18 40
+rect 32 38 44 40
+rect 10 34 18 38
+rect 30 34 47 38
+rect 66 34 72 35
+rect 14 -6 18 34
+rect 32 20 44 34
+rect 66 26 112 34
+rect 68 20 112 26
+rect 68 16 81 20
+rect 84 17 105 20
+rect 68 15 80 16
+rect 65 6 80 15
+rect 10 -8 32 -6
+rect 45 -8 57 -6
+rect 10 -16 12 -8
+rect 14 -26 18 -8
+rect 10 -27 18 -26
+rect 8 -29 18 -27
+rect 10 -30 18 -29
+rect 20 -27 21 -16
+rect 20 -36 40 -27
+rect 17 -45 19 -36
+rect 68 -44 82 6
+rect 93 -8 96 0
+rect 117 -1 119 7
+rect 128 -1 130 0
+rect 108 -41 112 -39
+rect 135 -41 140 -39
+rect 10 -56 30 -52
+rect 68 -56 80 -44
+rect 14 -60 26 -56
+rect 68 -64 81 -56
+rect 117 -57 119 -48
+rect 68 -72 80 -64
 << nwell >>
 rect -20 140 96 260
 rect -20 20 112 140
@@ -50,11 +103,11 @@ rect 32 -16 40 -8
 rect 20 -36 48 -16
 rect 64 -56 84 -28
 use pfet_03v3_J582B5  XM3
-timestamp 0
+timestamp 1790065159
 transform 1 0 24 0 1 4
 box -56 -76 56 76
 use nfet_03v3_SJFTX6  XM4
-timestamp 0
+timestamp 1790065159
 transform 1 0 124 0 1 -25
 box -56 -59 56 59
 << labels >>
