@@ -1,0 +1,67 @@
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/TG/TB_transgate.sch
+**.subckt TB_transgate
+V1 a 0 0 PULSE('PAR_VDD' 0 PAR_DEL PAR_SLEW PAR_SLEW '0.5*PAR_PER' '1.0*PAR_PER')
+Vsup dvdd 0 PAR_VDD
+C1 vout 0 'PAR_CLOAD'
+V2 b 0 0 PULSE('PAR_VDD' 0 PAR_DEL PAR_SLEW PAR_SLEW '1.0*PAR_PER' '2.0*PAR_PER')
+x1 dvdd vout a 0 b transgate
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/smbb000149.ngspice typical
+
+
+
+** PARAMETERS
+.PARAM PAR_VDD=3.3
+.PARAM PAR_CLOAD=10f
+.PARAM PAR_SLEW=100p
+.PARAM PAR_PER=10n
+.PARAM PAR_DEL='0.1*PAR_PER'
+
+.control
+save all
+OP
+TRAN 1p 21n
+write TB_inv1.raw
+plot v(a) v(vout)
+plot v(b)
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  src/schematic/TG/transgate.sym # of pins=5
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/TG/transgate.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/TG/transgate.sch
+.subckt transgate vdd s d gnd c
+*.iopin gnd
+*.iopin vdd
+*.iopin c
+*.ipin d
+*.opin s
+XM1 d c s gnd nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM2 d net1 s vdd pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+x1 vdd c net1 gnd Inv1
+.ends
+
+
+* expanding   symbol:  src/schematic/INV/Inv1.sym # of pins=4
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/Inv1.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/Inv1.sch
+.subckt Inv1 DVDD vin vout DVSS
+*.ipin vin
+*.opin vout
+*.iopin DVDD
+*.iopin DVSS
+XM3 vout vin DVDD DVDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM4 vout vin DVSS DVSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+.ends
+
+.end

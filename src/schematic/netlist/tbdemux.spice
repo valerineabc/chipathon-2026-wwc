@@ -1,0 +1,110 @@
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/DEMUX/tbdemux.sch
+**.subckt tbdemux
+Vin D 0 pulse(0 1.8 0 1n 1n 100n 200n)
+Vs0 S0 0 pulse(0 1.8 0 1n 1n 400n 800n)
+Vs1 S1 0 pulse(0 1.8 0 1n 1n 800n 1600n)
+Vd VDD 0 1.8
+x1 Y0 D S0 Y1 Y2 Y3 S1 demux1to4
+C1 Y3 0 10f
+C2 Y2 0 10f
+C3 Y1 0 10f
+C4 Y0 0 10f
+**** begin user architecture code
+
+
+.control
+* Menjalankan simulasi transien
+run
+* Memplot hasil simulasi
+plot D S0 S1 Y0 Y1 Y2 Y3
+.endc
+
+* Library PDK (Jangan diubah path-nya)
+**.include /home/tubesel4042k2/.volare/volare/gf180mcu/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/gf180mcuD/libs.tech/ngspice/design.ngspice
+**.lib /home/tubesel4042k2/.volare/volare/gf180mcu/versions/c6d73a35f524070e85faff4a6a9eef49553ebc2b/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.include $PDK_ROOT/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib $PDK_ROOT/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+
+* Pengaturan simulasi
+.tran 0.1n 2000n
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  src/schematic/DEMUX/demux1to4.sym # of pins=7
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/DEMUX/demux1to4.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/DEMUX/demux1to4.sch
+.subckt demux1to4 y0 D s0 y1 y2 y3 s1
+*.ipin s0
+*.ipin s1
+*.ipin D
+*.opin y0
+*.opin y1
+*.opin y2
+*.opin y3
+x0 VDD s0 s0b 0 inverter
+x2 VDD s1 s1b 0 inverter
+*  x3 -  nand  IS MISSING !!!!
+*  x4 -  nand  IS MISSING !!!!
+*  x5 -  nand  IS MISSING !!!!
+*  x6 -  nand  IS MISSING !!!!
+x7 VDD E0b E0 0 inverter
+x8 VDD E1b E1 0 inverter
+x9 VDD E2b E2 0 inverter
+x10 VDD E3b E3 0 inverter
+x11 net1 net2 D net3 net4 transgate
+x12 net5 net6 D net7 net8 transgate
+x13 net9 net10 D net11 net12 transgate
+x14 net13 net14 D net15 net16 transgate
+.ends
+
+
+* expanding   symbol:  src/schematic/INV/inverter.sym # of pins=4
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/inverter.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/inverter.sch
+.subckt inverter vdd vi vo gnd
+*.ipin vi
+*.opin vo
+*.iopin vdd
+*.iopin gnd
+XM1 vo vi vdd vdd pfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM2 vo vi gnd gnd nfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+.ends
+
+
+* expanding   symbol:  src/schematic/TG/transgate.sym # of pins=5
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/TG/transgate.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/TG/transgate.sch
+.subckt transgate vdd s d gnd c
+*.iopin gnd
+*.iopin vdd
+*.iopin c
+*.ipin d
+*.opin s
+XM1 d c s gnd nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM2 d net1 s vdd pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+x1 vdd c net1 gnd Inv1
+.ends
+
+
+* expanding   symbol:  src/schematic/INV/Inv1.sym # of pins=4
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/Inv1.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/Inv1.sch
+.subckt Inv1 DVDD vin vout DVSS
+*.ipin vin
+*.opin vout
+*.iopin DVDD
+*.iopin DVSS
+XM3 vout vin DVDD DVDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM4 vout vin DVSS DVSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+.ends
+
+.GLOBAL VDD
+.end
