@@ -1,0 +1,61 @@
+** sch_path: /foss/designs/chipathon-2026-wwc/src/schematic/6T4BIT/6T4bit_tb.sch
+**.subckt 6T4bit_tb
+V1 WL 0 0 PULSE('PAR_VDD' 0 PAR_DEL PAR_SLEW PAR_SLEW '2*PAR_PER' '4.0*PAR_PER')
+Vsup dvdd 0 PAR_VDD
+V2 BLB 0 0 PULSE('PAR_VDD' 0 'PAR_DEL+PAR_PER' PAR_SLEW PAR_SLEW 'PAR_PER' '2.0*PAR_PER')
+x1 dvdd WL BLB BL Q 0 6T4bit
+C2 Q 0 'PAR_CLOAD'
+V3 BL 0 0 PULSE('PAR_VDD' 0 PAR_DEL PAR_SLEW PAR_SLEW 'PAR_PER' '2.0*PAR_PER')
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/smbb000149.ngspice typical
+
+
+
+** PARAMETERS
+.PARAM PAR_VDD=3.3
+.PARAM PAR_CLOAD=10f
+.PARAM PAR_SLEW=100p
+.PARAM PAR_PER=10n
+.PARAM PAR_DEL='0.1*PAR_PER'
+
+.control
+save all
+OP
+TRAN 1p 81n
+write TB_inv1.raw
+plot v(wl) v(bl) v(blb)
+plot v(q)
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  src/schematic/6T4BIT/6T4bit.sym # of pins=6
+** sym_path: /foss/designs/chipathon-2026-wwc/src/schematic/6T4BIT/6T4bit.sym
+** sch_path: /foss/designs/chipathon-2026-wwc/src/schematic/6T4BIT/6T4bit.sch
+.subckt 6T4bit VDD WL BLB BL Q GND
+*.iopin BLB
+*.iopin GND
+*.iopin Q
+*.iopin VDD
+*.iopin BL
+*.iopin WL
+XSR1_M6 Q WL BL GND nfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XSR1_M3 VDD net1 Q VDD pfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XSR1_M4 net1 net2 VDD VDD pfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XSR1_M5 BLB WL net1 GND nfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XSR1_M1 GND net1 Q GND nfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XSR1_M2 net1 net2 GND GND nfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+.ends
+
+.end
