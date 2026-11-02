@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ** sch_path: /foss/designs/chipathon-2026-wwc/src/schematic/TG/TB_transgate.sch
+=======
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/TG/TB_transgate.sch
+>>>>>>> 3ad205d327a84b5307fa2691589fc7060ba4ca3a
 **.subckt TB_transgate
 V1 a 0 0 PULSE('PAR_VDD' 0 PAR_DEL PAR_SLEW PAR_SLEW '0.5*PAR_PER' '1.0*PAR_PER')
 Vsup dvdd 0 PAR_VDD
@@ -34,8 +38,13 @@ plot v(b)
 **.ends
 
 * expanding   symbol:  src/schematic/TG/transgate.sym # of pins=5
+<<<<<<< HEAD
 ** sym_path: /foss/designs/chipathon-2026-wwc/src/schematic/TG/transgate.sym
 ** sch_path: /foss/designs/chipathon-2026-wwc/src/schematic/TG/transgate.sch
+=======
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/TG/transgate.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/TG/transgate.sch
+>>>>>>> 3ad205d327a84b5307fa2691589fc7060ba4ca3a
 .subckt transgate vdd s d gnd c
 *.iopin gnd
 *.iopin vdd
@@ -51,8 +60,13 @@ x1 vdd c net1 gnd Inv1
 
 
 * expanding   symbol:  src/schematic/INV/Inv1.sym # of pins=4
+<<<<<<< HEAD
 ** sym_path: /foss/designs/chipathon-2026-wwc/src/schematic/INV/Inv1.sym
 ** sch_path: /foss/designs/chipathon-2026-wwc/src/schematic/INV/Inv1.sch
+=======
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/Inv1.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/Inv1.sch
+>>>>>>> 3ad205d327a84b5307fa2691589fc7060ba4ca3a
 .subckt Inv1 DVDD vin vout DVSS
 *.ipin vin
 *.opin vout

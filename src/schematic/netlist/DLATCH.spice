@@ -1,0 +1,50 @@
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/DLATCH/DLATCH.sch
+**.subckt DLATCH d q e DVDD qn DVSS
+*.ipin d
+*.ipin e
+*.iopin DVDD
+*.iopin DVSS
+*.opin q
+*.opin qn
+x1 d e DVDD net2 DVSS NAND
+x2 e net1 DVDD net3 DVSS NAND
+x3 net2 qn DVDD q DVSS NAND
+x4 q net3 DVDD qn DVSS NAND
+x5 DVDD d net1 DVSS Inv1
+**.ends
+
+* expanding   symbol:  src/schematic/NAND/NAND.sym # of pins=5
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/NAND/NAND.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/NAND/NAND.sch
+.subckt NAND a b DVDD vout DVSS
+*.ipin a
+*.opin vout
+*.iopin DVDD
+*.iopin DVSS
+*.ipin b
+XM3 vout a DVDD DVDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM4 vout a net1 DVSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM1 vout b DVDD DVDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM2 net1 b DVSS DVSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+.ends
+
+
+* expanding   symbol:  src/schematic/INV/Inv1.sym # of pins=4
+** sym_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/Inv1.sym
+** sch_path: /foss/designs/Chipaton2026/chipathon-2026-wwc/src/schematic/INV/Inv1.sch
+.subckt Inv1 DVDD vin vout DVSS
+*.ipin vin
+*.opin vout
+*.iopin DVDD
+*.iopin DVSS
+XM3 vout vin DVDD DVDD pfet_03v3 L=0.3u W=1.7u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM4 vout vin DVSS DVSS nfet_03v3 L=0.3u W=0.85u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+.ends
+
+.end

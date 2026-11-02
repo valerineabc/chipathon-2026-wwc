@@ -9,10 +9,6 @@ N -130 -220 -110 -220 {lab=s0}
 N -130 540 -110 540 {lab=s1}
 C {src/schematic/INV/inverter.sym} -50 -220 0 0 {name=x0}
 C {src/schematic/INV/inverter.sym} -50 540 0 0 {name=x2}
-C {nand.sym} 200 -220 0 0 {name=x3}
-C {nand.sym} 200 30 0 0 {name=x4}
-C {nand.sym} 200 280 0 0 {name=x5}
-C {nand.sym} 200 540 0 0 {name=x6}
 C {src/schematic/INV/inverter.sym} 440 -230 0 0 {name=x7}
 C {src/schematic/INV/inverter.sym} 440 20 0 0 {name=x8}
 C {src/schematic/INV/inverter.sym} 440 270 0 0 {name=x9}
@@ -91,3 +87,7 @@ C {gnd.sym} 190 330 0 0 {name=l26 lab=0}
 C {gnd.sym} 190 590 0 0 {name=l27 lab=0}
 C {lab_pin.sym} 380 530 0 0 {name=p32 sig_type=std_logic lab=E3b}
 C {gnd.sym} -90 590 0 0 {name=l28 lab=0}
+C {src/schematic/NAND/nand.sym} 190 -220 0 0 {name=x1}
+C {src/schematic/NAND/nand.sym} 190 30 0 0 {name=x3}
+C {src/schematic/NAND/nand.sym} 190 280 0 0 {name=x4}
+C {src/schematic/NAND/nand.sym} 190 540 0 0 {name=x5}
